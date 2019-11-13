@@ -1,0 +1,58 @@
+#presentation p {
+    position: absolute;
+        top: 0;
+    margin: 0;
+
+    width: 100vw;
+
+    animation-fill-mode: forwards;
+}
+
+#presentation p img {
+    /*height: 100vh;*/
+
+    max-width: 100vw;
+    max-height: 100vh;
+
+    z-index: 1;
+}
+
+#presentation p span {
+    display: block;
+    text-align: center;
+
+    font-size: 10rem;
+    margin-top: -15rem;
+    z-index: 10;
+
+}
+
+#presentation .show {
+    animation-duration: 3s;
+    animation-name: fadeIn;
+}
+
+#presentation .hide {
+    animation-duration: 3s;
+    animation-name: fadeOut;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

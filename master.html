@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style/general.css">
+    <title>LightPresentation - Controls</title>
+</head>
+<body>
+<ul id="control"></ul>
+<div id="media-control">
+    <p data-action="play">►</p>
+    <p data-action="pause">║</p>
+    <p data-action="restart">■</p>
+    <input type="range" data-action="volume" min="0" max="100" />
+    <br />
+    <input type="range" data-action="rewind" id="media-position" min="0" max="1000" />
+</div>
+<button id="open-slave-btn">Open slave</button>
+<script src="js/helper.js"></script>
+<script src="js/master.js"></script>
+<script type="text/javascript">
+    var c = new Master();
+    c.setItems([
+        // type: url, value: <URL to open>
+        // type: video, value: <path to video>
+        // type: presentation: value: <array<src: <path to photo>, text: <text>>>
+
+        {name: 'URL', type: 'url', value: 'slides/url/index.html'},
+        {name: 'Video', type: 'video', value: 'slides/videos/LightPresenter-video.mp4', videoEnd: {type: "url", value: "slides/blank/index.html"}},
+        {name: 'You can add bg audio', type: 'url', value: 'slides/audio/index.html', audio: 'slides/audio/track.mp3'},
+    ]);
+    document.querySelector("#open-slave-btn").addEventListener("click", c.openSlave);
+</script>
+</body>
+</html>
