@@ -119,6 +119,10 @@ function Slave() {
         }
     };
 
+    let removeTarget = (e) => {
+        e.target.remove();
+    }
+
     // init
     // hide everything
     this.hideAll();
@@ -137,6 +141,8 @@ function Slave() {
             handleVideoEnd();
         }
     })
+
+    document.querySelector("#enableAutoplay").addEventListener("click", removeTarget);
 }
 
 let s = new Slave();
