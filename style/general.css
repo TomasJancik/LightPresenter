@@ -6,6 +6,10 @@ body {
     font-family: 'Agency FB', Arial;
 }
 
+body button#open-slave-btn {
+    float: right;
+}
+
 body#slave iframe{
     margin: 0;
     width: 100vw;
