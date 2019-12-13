@@ -1,0 +1,14 @@
+img.fadeIn {
+    animation-name: fadein;
+    animation-duration: 10s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
